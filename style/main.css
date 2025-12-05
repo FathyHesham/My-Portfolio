@@ -806,7 +806,7 @@ header .container {
 }
 
 .project-card.hidden {
-    display: none;
+    display: none !important;
 }
 
 .project-card.fade-out {
