@@ -1,0 +1,299 @@
+{
+	"experiences": [
+		{
+			"title": "Machine Learning Enginner",
+			"date": "April 2024 – November 2024 | ",
+			"status": "Training",
+			"description": "The training, part of the Digital Egypt Pioneers Initiative under the supervision of the Egyptian Ministry of Communications, focused on comprehensive learning and hands-on training in statistics, probability, machine learning, deep learning, natural language processing (NLP), and generative adversarial networks (GANs). It also included using various Microsoft tools to enhance technical expertise and practical application."
+		}
+	],
+	"skills": [
+		{ "skill_name": "HTML5", "skill_icon": "assets/images/img-skills/html-5.png", "alt": "HTML5" },
+		{ "skill_name": "CSS3", "skill_icon": "assets/images/img-skills/css-3.png", "alt": "CSS3" },
+		{ "skill_name": "JavaScript ES6", "skill_icon": "assets/images/img-skills/js.png", "alt": "JavaScript" },
+		{ "skill_name": "Bootstrap", "skill_icon": "assets/images/img-skills/bootstrap.png", "alt": "Bootstrap" },
+		{ "skill_name": "Python", "skill_icon": "assets/images/img-skills/python.png", "alt": "Python" },
+		{ "skill_name": "Data Analysis", "skill_icon": "assets/images/img-skills/analysis.png", "alt": "Data Analysis" },
+		{
+			"skill_name": "Machine Learning",
+			"skill_icon": "assets/images/img-skills/artificial-intelligence.png",
+			"alt": "Machine Learning"
+		},
+		{
+			"skill_name": "Deep Learning",
+			"skill_icon": "assets/images/img-skills/deep-learning.png",
+			"alt": "Deep Learning"
+		},
+		{
+			"skill_name": "NLP",
+			"skill_icon": "assets/images/img-skills/nlp.png",
+			"alt": "Natural Language Processing"
+		},
+		{
+			"skill_name": "Computer Vision",
+			"skill_icon": "assets/images/img-skills/ai-image.png",
+			"alt": "Computer Vision & Image Processing"
+		},
+		{
+			"skill_name": "Database & SQL",
+			"skill_icon": "assets/images/img-skills/database-file.png",
+			"alt": "Database & SQL"
+		},
+		{ "skill_name": "Git", "skill_icon": "assets/images/img-skills/git.png", "alt": "Git" },
+		{ "skill_name": "GitHub", "skill_icon": "assets/images/img-skills/github.png", "alt": "GitHub" }
+	],
+	"projects": [
+		{
+			"category": "artificial_intelligence",
+			"image": "assets/images/img-projects/nail-diseases-detection.png",
+			"alt": "Nail Diseases Detection Using Image Processing & Deep Learning",
+			"title": "Nail Diseases Detection Using Image Processing & Deep Learning",
+			"description": "Developed a diagnostic system using CNN, VGG-19, and ResNet-50 (Acc: 89%) to detect nail diseases from 12,700 images. Integrated with Flask web interface.",
+			"tags": ["Python", "Image Processing", "Deep Learning", "CNN", "VGG-19", "ResNet-50", "Flask"],
+			"github_link": "https://github.com/FathyHesham/Nail-Diseases-Detection-System-Graduation-Project-"
+		},
+		{
+			"category": "web_developer",
+			"image": "assets/images/img-projects/quiz-online-website-application.png",
+			"alt": "Quiz Online Website Application",
+			"title": "Quiz Online Website Application",
+			"description": "The Quiz application aims to deliver a smooth and interactive testing experience built entirely using Front-End technologies. It provides users with a structured and professional flow to navigate through questions, track remaining time, and view final results in a clear and engaging way.",
+			"tags": [
+				"HTML5",
+				"CSS3",
+				"JavaScript ES6",
+				"Fetch API",
+				"Bootstrap",
+				"Font Awesome",
+				"Local JSON file",
+				"Animations",
+				"Responsive Layout"
+			],
+			"github_link": "https://github.com/FathyHesham/Quiz-Online-Website-Application-",
+			"live_demo": "https://fathyhesham.github.io/Quiz-Online-Website-Application-/"
+		},
+		{
+			"category": "web_developer",
+			"image": "assets/images/img-projects/bondi-website-application.png",
+			"alt": "Bondi Website Application",
+			"title": "Bondi Website Application",
+			"description": "Bondi Website is a modern, responsive web template designed for a cafe or restaurant like Bondi, featuring an inviting aesthetic with sections for menus, reservations, and contact forms, optimized for seamless viewing across desktop, tablet, and mobile devices. Built using HTML5 for structure, CSS3 with Flexbox and Grid for flexible layouts, and Normalize.css for consistent styling, it incorporates interactive elements like smooth scrolling and hover effects to enhance user engagement.",
+			"tags": ["HTML5", "CSS3", "Bootstrap", "Font Awesome", "Responsive Layout"],
+			"github_link": "https://github.com/FathyHesham/Bondi-Website-Application",
+			"live_demo": "https://fathyhesham.github.io/Bondi-Website-Application/"
+		},
+		{
+			"category": "web_developer",
+			"image": "assets/images/img-projects/to-do-list-application.png",
+			"alt": "TO-DO List Application",
+			"title": "TO-DO List Application",
+			"description": "The To Do List App is a user-friendly task management tool developed using HTML, CSS, and JavaScript. It enables users to add, complete (via checkboxes), and delete tasks, with data saved persistently in the browser's local storage. The app boasts a clean interface featuring personal tabs, smooth animations, and efficient organization for daily activities.",
+			"tags": ["HTML5", "CSS3", "JavaScript ES6", "Font Awesome", "Animations", "Responsive Layout"],
+			"github_link": "https://github.com/FathyHesham/TO-DO-List-Application",
+			"live_demo": "https://fathyhesham.github.io/TO-DO-List-Application/"
+		},
+		{
+			"category": "web_developer",
+			"image": "assets/images/img-projects/sidebar-menu-template.png",
+			"alt": "Sidebar Menu Template",
+			"title": "Sidebar Menu Template",
+			"description": "This project is a responsive web dashboard featuring a collapsible sidebar menu with navigation links, a search bar, and a dark mode toggle, built using HTML, CSS, and JavaScript. It includes mobile-friendly behavior with a hamburger menu to open/close the sidebar and a semi-transparent overlay to improve usability on smaller screens.",
+			"tags": ["HTML5", "CSS3", "JavaScript ES6", "Bootstrap", "Font Awesome", "Animations", "Responsive Layout"],
+			"github_link": "https://github.com/FathyHesham/Sidebar-Menu-Template",
+			"live_demo": "https://fathyhesham.github.io/Sidebar-Menu-Template/"
+		},
+		{
+			"category": "web_developer",
+			"image": "assets/images/img-projects/social-links-profile-card.png",
+			"alt": "Social Links Profile Card",
+			"title": "Social Links Profile Card",
+			"description": "The 'Social Links Profile Card' project is a simple and attractive personal profile page designed to display a user's various social media account links. It features a responsive design that functions well across different screen sizes.",
+			"tags": ["HTML5", "CSS3", "Animations", "Responsive Layout"],
+			"github_link": "https://github.com/FathyHesham/Social-Links-Profile",
+			"live_demo": "https://fathyhesham.github.io/Social-Links-Profile/"
+		},
+		{
+			"category": "artificial_intelligence",
+			"image": "assets/images/img-projects/rag-system-application.png",
+			"alt": "RAG System – DEPI Chatbot",
+			"title": "RAG System – DEPI Chatbot",
+			"description": "Built a Retrieval-Augmented Generation system using LangChain, LLMs, and vector DB to answer DEPI initiative queries with contextual accuracy.",
+			"tags": ["RAG", "NLP", "LangChain", "LLMs", "Fine-tuning", "Python", "Vector DB", "Hugging Face", "Streamlit"],
+			"github_link": "https://github.com/FathyHesham/DEPI_CHATBOT_PROJECT"
+		},
+		{
+			"category": "artificial_intelligence",
+			"image": "assets/images/img-projects/generate-caption-image.png",
+			"alt": "Generate Caption of Image",
+			"title": "Generate Caption of Image",
+			"description": "Image captioning system using vit-gpt2-image-captioning model with PyTorch, Transformers, and Streamlit GUI. Clean OOP architecture.",
+			"tags": ["Python", "PyTorch", "Transformers", "NLP", "Computer Vision", "AI", "Streamlit", "Hugging Face"],
+			"github_link": "https://github.com/FathyHesham/Virtual-Question-Answering---Generate-Caption-Of-Image-"
+		},
+		{
+			"category": "artificial_intelligence",
+			"image": "assets/images/img-projects/text-summarization-using-nlp.png",
+			"alt": "Text Summarization Using NLP",
+			"title": "Text Summarization Using NLP",
+			"description": "Dialogue summarization app using BART-SAMSum, PyTorch GPU acceleration, and Streamlit. Human-like summaries with OOP design.",
+			"tags": ["NLP", "BART-SAMSum", "PyTorch", "Streamlit", "Python", "OOP", "Hugging Face"],
+			"github_link": "https://github.com/FathyHesham/Text-Summarization-Project"
+		},
+		{
+			"category": "data_analysis",
+			"image": "assets/images/img-projects/twitter-sentiment-analysis.png",
+			"alt": "Twitter Sentiment Analysis",
+			"title": "Twitter Sentiment Analysis",
+			"description": "Analyzed tweets using NLP, attention models, Pandas preprocessing, and advanced visualization for sentiment insights.",
+			"tags": [
+				"NLP",
+				"Pandas",
+				"Python",
+				"Sentiment Analysis",
+				"Data Visualization",
+				"Data Cleaning",
+				"Machine Learning",
+				"NumPy"
+			],
+			"github_link": "https://github.com/FathyHesham/Twitter_Sentiment_Analysis"
+		},
+		{
+			"category": "data_analysis",
+			"image": "assets/images/img-projects/superstore-exploratory-data-analysis.png",
+			"alt": "Superstore Exploratory Data Analysis",
+			"title": "Superstore Exploratory Data Analysis",
+			"description": "26-question retail analysis using Pandas, NumPy, feature engineering, and visualization for business insights.",
+			"tags": ["Data Analysis", "Pandas", "EDA", "Python", "NumPy", "Data Visualization", "Data Cleaning"],
+			"github_link": "https://github.com/FathyHesham/Superstore-Exploratory-Data-Analysis-EDA-"
+		},
+		{
+			"category": "data_analysis",
+			"image": "assets/images/img-projects/bitcoin-historical-data-analysis.png",
+			"alt": "Bitcoin Historical Data Analysis",
+			"title": "Bitcoin Historical Data Analysis",
+			"description": "Analyzed 1M+ Bitcoin records using ML models, preprocessing, and pattern detection for investment signals.",
+			"tags": ["Machine Learning", "Pandas", "Python", "Data Cleaning", "Visualization", "NumPy", "Data Analysis"],
+			"github_link": "https://github.com/FathyHesham/Bitcoin-Historical-Data"
+		},
+		{
+			"category": "artificial_intelligence",
+			"image": "assets/images/img-projects/clock-using-computer-vision.png",
+			"alt": "Clock Using Computer Vision",
+			"title": "Clock Using Computer Vision",
+			"description": "Real-time analog clock rendered with OpenCV, NumPy, and Matplotlib. Dynamic hands and smooth updates.",
+			"tags": ["Computer Vision", "OpenCV", "Python", "NumPy", "Matplotlib"],
+			"github_link": "https://github.com/FathyHesham/ClockProject_Code"
+		},
+		{
+			"category": "web_developer",
+			"image": "assets/images/img-projects/kasper-website-application.png",
+			"alt": "Kasper Website Application",
+			"title": "Kasper Website Application",
+			"description": "Kasper-Website is a modern, fully responsive template designed for creative agencies, personal portfolios, and businesses, featuring a clean structure and smooth performance across all devices. Built with HTML5 for structure, CSS3 (Flexbox & Grid) for styling, and Normalize.css for cross-browser consistency, it includes interactive navigation and mobile-first design.",
+			"tags": ["HTML", "CSS", "Responsive Layout", "Grid", "Flex"],
+			"github_link": "https://github.com/FathyHesham/Kasper-Website",
+			"live_demo": "https://fathyhesham.github.io/Kasper-Website/"
+		},
+		{
+			"category": "web_developer",
+			"image": "assets/images/img-projects/leon-website-applicatoin.png",
+			"alt": "Leon Website Applicatoin",
+			"title": "Leon Website Applicatoin",
+			"description": "Leon-Website is a modern, minimal, and responsive template designed for creative agencies, portfolios, and businesses, featuring a clean aesthetic, interactive navigation, and optimized performance across all devices. It leverages HTML5 for semantic structure, CSS3 with Flexbox and Grid for styling, Normalize.css for cross-browser consistency, Font Awesome for icons, and Google Fonts for typography.",
+			"tags": ["HTML", "CSS", "Responsive Layout", "Grid", "Flex", "Font Awesome"],
+			"github_link": "https://github.com/FathyHesham/Leon-Website",
+			"live_demo": "https://fathyhesham.github.io/Leon-Website/"
+		},
+		{
+			"category": "data_analysis",
+			"image": "assets/images/img-projects/web-scraping-yallaKora.png",
+			"alt": "Web Scraping YallaKora",
+			"title": "Web Scraping YallaKora",
+			"description": "Web-Scraping-YallaKora is a web scraping project focused on extracting live football match data from YallaKora, an Arabic sports website, to provide real-time updates on scores, fixtures, and team statistics for enthusiasts and developers. Built likely with Python and libraries such as BeautifulSoup or Scrapy for parsing HTML, it targets dynamic content from match pages and league tables, ensuring efficient data retrieval while respecting rate limits and site terms.",
+			"tags": ["Python", "Web Scraping", "Jupyter Notebook", "BeautifulSoup"],
+			"github_link": "https://github.com/FathyHesham/Web-Scraping-YallaKora"
+		}
+	],
+	"certifications": [
+		{
+			"image": "assets/images/img-certification/Front-End Certification.jpg",
+			"alt": "The Web Front End Learning Guide Certification From Udemy",
+			"title": "The Web Front End Learning Guide",
+			"from": "Udemy",
+			"date": "2025",
+			"show_certificate": "https://www.udemy.com/certificate/UC-f6ed961f-9767-4841-b178-337bdc6324b1/"
+		},
+		{
+			"image": "assets/images/img-certification/Microsoft Machine Learning Engineer Training Certification.jpg",
+			"alt": "Microsoft Machine Learning Engineer Training Certification",
+			"title": "Microsoft Machine Learning Engineer Training",
+			"from": "Ministry of Communications and Information Technology",
+			"date": "2024",
+			"show_certificate": "https://drive.google.com/file/d/1O2OWqAf_M9f0Odjoqd70N_hQcX2rAKdA/view"
+		},
+		{
+			"image": "assets/images/img-certification/Intro to LLMs Certification.png",
+			"alt": "Introduction To LLMs Certificate from 365 DataScience",
+			"title": "Introduction To LLMs",
+			"from": "365 DataScience",
+			"date": "2024",
+			"show_certificate": "https://learn.365datascience.com/certificates/CC-DEAFF4E5FA/"
+		},
+		{
+			"image": "assets/images/img-certification/Intro to NLP for AI Certification.png",
+			"alt": "Introduction To NLP For AI Certificate from 365 DataScience",
+			"title": "Introduction To NLP For A",
+			"from": "365 DataScience",
+			"date": "2024",
+			"show_certificate": "https://learn.365datascience.com/certificates/CC-C3BDB6D2FF/"
+		},
+		{
+			"image": "assets/images/img-certification/ALX AiCE AI Career Essentials Certificate.png",
+			"alt": "ALX AiCE AI Career Essentials Certificate",
+			"title": "ALX AiCE-AI Career Essentials",
+			"from": "alx_africa",
+			"date": "2024",
+			"show_certificate": "https://savanna.alxafrica.com/certificates/YGpRHCT7zh"
+		},
+		{
+			"image": "assets/images/img-certification/Supervised Machine Learning_ Regression and Classification Certification.png",
+			"alt": "Supervised Machine Learning Certificate from Stanford University",
+			"title": "Supervised Machine Learning - Regression and Classification",
+			"from": "Stanford University ONLINE",
+			"date": "2024",
+			"show_certificate": "https://www.coursera.org/account/accomplishments/verify/U553Y8JAMNPU?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+		},
+		{
+			"image": "assets/images/img-certification/Database Fundamentals Certification.png",
+			"alt": "Database Fundamentals Certificate from Mahara Tech",
+			"title": "Database Fundamentals",
+			"from": "Mahara Tech",
+			"date": "2024",
+			"show_certificate": "https://drive.google.com/file/d/1aQgd5OE_61lZKAU_S1PiMvJpOJcH7cI3/view"
+		},
+		{
+			"image": "assets/images/img-certification/Python for Data Science and Machine Learning Certification.jpg",
+			"alt": "Python for Data Science and Machine Learning Certificate from Udemy",
+			"title": "Python for Data Science and Machine Learning",
+			"from": "Udemy",
+			"date": "2024",
+			"show_certificate": "https://www.udemy.com/certificate/UC-e34b0e93-8757-4700-9f71-19d4f2660349/"
+		},
+		{
+			"image": "assets/images/img-certification/The Python Language Guide Certification.jpg",
+			"alt": "Python and Django Learning Guide Certificate from Udemy",
+			"title": "The Python and Django Learning Guide",
+			"from": "Udemy",
+			"date": "2024",
+			"show_certificate": "https://www.udemy.com/certificate/UC-1dde8d55-2bf8-4e87-99b4-73a0cb8feadd/"
+		},
+		{
+			"image": "assets/images/img-certification/Introduction To Computer Vision Certification.jpg",
+			"alt": "Introduction To Computer Vision Certificate from ITI",
+			"title": "Introduction To Computer Vision",
+			"from": "Information Technology Institute (ITI)",
+			"date": "2022",
+			"show_certificate": "https://drive.google.com/file/d/1ksaktzfcwzRGYp1pMBJDDL9irTF0vSiJ/view"
+		}
+	]
+}
