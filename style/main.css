@@ -10,6 +10,7 @@
     --bg-primary: #fafafa;
     --surface: #ffffff;
     --surface-hover: #f1f5f9;
+    --background: var(--bg-primary);
 
     --text-primary: #1f2937;
     --text-secondary: #4b5563;
@@ -38,6 +39,7 @@
     --bg-primary: #0f172a;
     --surface: #1e293b;
     --surface-hover: #334155;
+    --background: var(--bg-primary);
 
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
@@ -157,6 +159,14 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.title-section .subtitle {
+    max-width: 72rem;
+    margin: 0.9rem auto 0;
+    color: var(--text-secondary);
+    font-size: 1.6rem;
+    line-height: 1.65;
 }
 
 .tags {
@@ -503,6 +513,10 @@ header .container {
     gap: 1.5rem;
 }
 
+.content-about .summary p {
+    margin-bottom: 0;
+}
+
 .content-about .summary a {
     color: var(--primary);
     font-weight: bold;
@@ -532,7 +546,7 @@ header .container {
 
 .experiences {
     padding-top: 10rem;
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
     min-height: 100vh;
 }
 
@@ -540,55 +554,135 @@ header .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .experiences .container .cards-exper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    width: 100%;
+    margin-top: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+    max-width: 92rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4.2rem;
+}
+
+.experiences .container .cards-exper::before {
+    content: "";
+    position: absolute;
+    left: 1.35rem;
+    top: 0.2rem;
+    bottom: 0.2rem;
+    width: 0.2rem;
+    border-radius: 1rem;
+    background: linear-gradient(180deg,
+            rgba(96, 165, 250, 0.9),
+            rgba(6, 182, 212, 0.65));
+    opacity: 0.9;
 }
 
 .experiences .container .exp-card {
+    position: relative;
     background: var(--surface);
-    width: 80%;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    margin-bottom: 1.5rem;
-    box-shadow: var(--shadow-md);
+    padding: 2.1rem 2.2rem 2rem;
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow);
     border: 1px solid var(--border);
     color: var(--text-primary);
     transition: var(--transition);
+    outline: none;
+}
+
+.experiences .container .exp-card:focus-within {
+    border-color: var(--border-focus);
+    box-shadow: 0 1.8rem 4.2rem rgba(96, 165, 250, 0.18);
+}
+
+.experiences .container .exp-card::before {
+    content: "";
+    position: absolute;
+    left: -3.55rem;
+    top: 2.35rem;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 999px;
+    background: var(--bg-primary);
+    box-shadow: 0 0 0 0.35rem rgba(96, 165, 250, 0.25);
+    border: 0.25rem solid var(--primary);
+    z-index: 1;
+}
+
+.experiences .container .exp-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0.35rem 0 0 rgba(96, 165, 250, 0.55);
+    opacity: 0.75;
 }
 
 .experiences .container .exp-card:hover {
-    transform: translateY(-1rem);
-    border-color: var(--primary);
-    box-shadow: 0 1.5rem 3.5rem rgba(96, 165, 250, 0.25);
+    transform: translateY(-0.7rem);
+    border-color: var(--border-focus);
+    background: var(--surface-hover);
+    box-shadow: 0 1.8rem 4.2rem rgba(96, 165, 250, 0.18);
 }
 
-.experiences .container .exp-card h2 {
-    font-family: "Lobster Two", cursive;
-    font-weight: 600;
+.experiences .container .exp-card:hover::before {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0.45rem rgba(6, 182, 212, 0.2);
+}
+
+.experiences .container .exp-card .exp-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.experiences .container .exp-card .exp-card__title {
+    margin: 0;
+    font-size: 2.1rem;
+    font-weight: 750;
+    letter-spacing: 0.01em;
+}
+
+.experiences .container .exp-card .exp-card__badge {
+    flex: 0 0 auto;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+}
+
+.experiences .container .exp-card .exp-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.7rem;
+    color: var(--text-muted);
+    font-size: 1.45rem;
+}
+
+.experiences .container .exp-card .exp-card__meta i {
     color: var(--primary);
-    margin-bottom: 1rem;
+    font-size: 1.55rem;
 }
 
-.experiences .container .exp-card ul {
-    padding-left: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-.experiences .container .exp-card ul li {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.experiences .container .exp-card time {
-    font-size: 1.6rem;
+.experiences .container .exp-card .exp-card__date {
     font-weight: 600;
-    display: block;
-    padding-bottom: 1rem;
+}
+
+.experiences .container .exp-card .exp-card__desc {
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+    color: var(--text-secondary);
+    font-size: 1.55rem;
+    line-height: 1.7;
 }
 
 @media (max-width: 768px) {
@@ -598,18 +692,22 @@ header .container {
     }
 
     .experiences .container .cards-exper {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
+        gap: 1.25rem;
+        padding-left: 3.6rem;
     }
 
-    .experiences .container .exp-card h2 {
-        font-family: "Lobster Two", cursive;
-        font-weight: 600;
+    .experiences .container .exp-card {
+        padding: 1.9rem 1.7rem 1.7rem;
     }
 
-    .experiences .container .exp-card ul li {
-        font-size: 1.5rem;
-        font-weight: bold;
+    .experiences .container .exp-card .exp-card__title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .experiences .container .cards-exper {
+        max-width: 80rem;
     }
 }
 
@@ -1062,7 +1160,7 @@ header .container {
 
 .certifications .container .cert-card .cert-content .cert-btn:hover {
     background: var(--primary);
-    color: var(--background);
+    color: var(--button-text);
     transform: translateY(-3px);
     box-shadow: var(--shadow);
 }

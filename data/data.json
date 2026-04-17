@@ -12,6 +12,8 @@
 		{ "skill_name": "CSS3", "skill_icon": "assets/images/img-skills/css-3.png", "alt": "CSS3" },
 		{ "skill_name": "JavaScript ES6", "skill_icon": "assets/images/img-skills/js.png", "alt": "JavaScript" },
 		{ "skill_name": "Bootstrap", "skill_icon": "assets/images/img-skills/bootstrap.png", "alt": "Bootstrap" },
+		{ "skill_name": "TypeScript", "skill_icon": "assets/images/img-skills/typescript.png", "alt": "TypeScript" },
+		{ "skill_name": "React-Js", "skill_icon": "assets/images/img-skills/react-js.svg", "alt": "React-Js" },
 		{ "skill_name": "Python", "skill_icon": "assets/images/img-skills/python.png", "alt": "Python" },
 		{ "skill_name": "Data Analysis", "skill_icon": "assets/images/img-skills/analysis.png", "alt": "Data Analysis" },
 		{
