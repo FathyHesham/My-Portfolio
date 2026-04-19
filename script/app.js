@@ -1,5 +1,5 @@
 /* ============================= Start Import Differences Features ============================= */
-import { initMenuToggle, initThemeSwitcher } from "./ui.js";
+import { initActiveNavLinks, initMenuToggle, initThemeSwitcher } from "./ui.js";
 import { getData } from "./api.js";
 import { renderExperiences } from "./render/renderExperiences.js";
 import { renderSkills } from "./render/renderSkills.js";
@@ -10,6 +10,7 @@ import { renderCertifications } from "./render/renderCertifications.js";
 document.addEventListener("DOMContentLoaded", () => {
     initMenuToggle();
     initThemeSwitcher();
+    initActiveNavLinks();
 });
 
 

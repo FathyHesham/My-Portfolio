@@ -11,12 +11,44 @@ export function initMenuToggle () {
 
     linksElement.forEach((link) => {
         link.addEventListener("click", () => {
-            toggleButton.classList.toggle("active");
-            ulElement.classList.toggle("active");
+            if (toggleButton.classList.contains("active")) {
+                toggleButton.classList.remove("active");
+                ulElement.classList.remove("active");
+            }
         });
     });
 }
 /* ============================= End Activate Toggle Button ============================= */
+
+/* ============================= Start Active Nav Link On Scroll ============================= */
+export function initActiveNavLinks () {
+    const links = Array.from(document.querySelectorAll("#links-list a[href^='#']"));
+    const sections = links
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+    if (!links.length || !sections.length) return;
+
+    const updateActiveLink = () => {
+        const scrollPosition = window.scrollY + 130;
+        let activeId = sections[0].id;
+
+        sections.forEach((section) => {
+            if (scrollPosition >= section.offsetTop) {
+                activeId = section.id;
+            }
+        });
+
+        links.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${activeId}`;
+            link.classList.toggle("active", isActive);
+        });
+    };
+
+    updateActiveLink();
+    window.addEventListener("scroll", updateActiveLink, { passive: true });
+}
+/* ============================= End Active Nav Link On Scroll ============================= */
 
 /* ============================= Start Change Theme Dark || Light ============================= */
 export function initThemeSwitcher () {
