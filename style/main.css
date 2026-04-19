@@ -217,6 +217,7 @@ img {
     color: #ffffff;
     width: fit-content;
     font-weight: bold;
+    font-size: 1.3rem;
     padding: 0.2rem 0.5rem;
     border-radius: 0.5rem;
 }
@@ -354,7 +355,7 @@ header .container {
         right: -50rem;
         flex-direction: column;
         background: var(--menu-bg);
-        width: 50%;
+        width: clamp(22rem, 60%, 32rem);
         text-align: center;
         transition: var(--transition);
         box-shadow: var(--shadow);
@@ -365,11 +366,17 @@ header .container {
     }
 
     .navigation-bar ul.active {
-        right: 3rem;
+        right: 1.5rem;
     }
 
     .navigation-bar li {
         margin: 0 auto;
+        width: 100%;
+    }
+
+    .navigation-bar .links-list li a {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -577,6 +584,35 @@ header .container {
     }
 }
 
+@media (max-width: 400px) {
+    .home .container .home-content .home-title {
+        font-size: 2rem;
+    }
+
+    .home .container .home-content .job-titles {
+        font-size: 1.35rem;
+    }
+
+    .home .container .profile-image {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .btn a {
+        width: 100%;
+    }
+
+    .btn a button {
+        width: 100%;
+    }
+}
+
 /* ========================= End Home Section ========================= */
 /* ========================= Start About Section ========================= */
 .about {
@@ -692,7 +728,7 @@ header .container {
 
 @media (max-width: 768px) {
     .about {
-        padding: 3rem 0;
+        padding: 8rem 0 3rem;
         height: auto;
     }
 
@@ -732,7 +768,7 @@ header .container {
 
 .what-i-do-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 2.5rem;
     width: 100%;
     margin-top: 3rem;
@@ -820,7 +856,7 @@ header .container {
     margin-top: 2.5rem;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(44rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(44rem, 100%), 1fr));
     gap: 2.25rem;
     max-width: 120rem;
     margin-left: auto;
@@ -900,21 +936,27 @@ header .container {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1rem;
+    flex-wrap: wrap;
+    min-width: 0;
 }
 
 .exp-card__title-group {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    min-width: 0;
+    flex: 1 1 0;
 }
 
 .experiences .container .exp-card .exp-card__title {
     margin: 0;
-    font-size: 2.1rem;
+    font-size: clamp(1.6rem, 2.5vw, 2.1rem);
     font-weight: 750;
     font-family: "Lobster Two", cursive;
     color: var(--primary);
     letter-spacing: 0.01em;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .experiences .container .exp-card .exp-card__badge {
@@ -924,6 +966,7 @@ header .container {
     font-size: 1.25rem;
     letter-spacing: 0.02em;
     align-self: flex-start;
+    white-space: nowrap;
 }
 
 .experiences .container .exp-card .exp-card__meta {
@@ -984,7 +1027,9 @@ header .container {
     font-size: 1.4rem;
     font-weight: 600;
     border: 1px solid rgba(96, 165, 250, 0.18);
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 100%;
 }
 
 .exp-card__tech-stack {
@@ -1062,7 +1107,7 @@ header .container {
 
 .skills-groups {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
     gap: 2.2rem;
     width: 100%;
 }
@@ -1095,8 +1140,8 @@ header .container {
     justify-content: center;
     padding: 1rem 0;
     border-radius: 0.8rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(250, 250, 250, 0.4));
-    border: 0.1rem solid rgba(2, 2, 2, 0.651);
+    background: var(--surface);
+    border: 0.1rem solid var(--border);
     transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
@@ -1246,7 +1291,7 @@ header .container {
 .evaluation-versions,
 .cards-project {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
     gap: 2rem;
     width: 100%;
 }
@@ -1581,7 +1626,7 @@ header .container {
     display: none;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .case-study-modal.active {
@@ -1590,7 +1635,7 @@ header .container {
 
 .case-study-modal-content {
     width: min(80rem, 100%);
-    max-height: 90vh;
+    max-height: 92vh;
     overflow-y: auto;
     background: linear-gradient(180deg, var(--surface), rgba(96, 165, 250, 0.08));
     border: 1px solid rgba(96, 165, 250, 0.25);
@@ -1631,7 +1676,7 @@ header .container {
     border-radius: 1.2rem;
     overflow: hidden;
     border: 1px solid var(--border);
-    min-height: 19rem;
+    min-height: clamp(14rem, 20vw, 19rem);
     background: var(--surface-hover);
 }
 
@@ -1649,10 +1694,10 @@ header .container {
 }
 
 .case-study-modal-content h3 {
-    font-size: 2.3rem;
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
     color: var(--primary);
     margin-bottom: 0;
-    padding-right: 3rem;
+    padding-right: 4rem;
 }
 
 .modal-details-grid {
@@ -1707,7 +1752,22 @@ header .container {
 
 @media (max-width: 992px) {
     .cards-project {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-modal-content {
+        padding: 1.8rem 1.5rem;
+        border-radius: var(--radius-md);
     }
 }
 
@@ -1758,16 +1818,12 @@ header .container {
         grid-template-columns: 1fr;
     }
 
-    .modal-hero {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-details-grid {
-        grid-template-columns: 1fr;
-    }
-
     .case-study-modal-content {
-        padding: 1.5rem;
+        padding: 1.2rem 1rem;
+    }
+
+    .modal-hero-image {
+        min-height: 16rem;
     }
 }
 
@@ -1791,7 +1847,7 @@ header .container {
 
 .certifications .container .cert-card {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
     gap: 2rem;
     width: 100%;
 }

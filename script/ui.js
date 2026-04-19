@@ -72,21 +72,26 @@ export function initThemeSwitcher () {
         }
     };
 
+    const applyTheme = (isDark) => {
+        bodyElement.classList.toggle("dark-theme", isDark);
+        // dark mode → show sun icon (click to go light)
+        // light mode → show moon icon (click to go dark)
+        if (isDark) {
+            icon.className = "bi bi-sun";
+        } else {
+            icon.className = "bi bi-moon-stars";
+        }
+    };
+
     themeIconElement.addEventListener("click", () => {
-        const isDark = bodyElement.classList.toggle("dark-theme");
-        icon.classList.replace(
-            isDark ? "bi-moon-stars" : "bi-brightness-high",
-            isDark ? "bi-brightness-high" : "bi-moon-stars"
-        );
+        const isDark = !bodyElement.classList.contains("dark-theme");
+        applyTheme(isDark);
         saveTheme(isDark ? "dark-theme" : "light-theme");
     });
 
-    const savedtheme = loadedTheme();
-    const isDark = savedtheme === "dark-theme";
-    bodyElement.classList.toggle("dark-theme", isDark);
-    icon.classList.replace(
-        isDark ? "bi-moon-stars" : "bi-brightness-high",
-        isDark ? "bi-brightness-high" : "bi-moon-stars"
-    );
+    // Default is dark — only override if user explicitly saved light
+    const savedTheme = loadedTheme();
+    const isDark = savedTheme !== "light-theme";
+    applyTheme(isDark);
 }
 /* ============================= End Change Theme Dark || Light ============================= */
