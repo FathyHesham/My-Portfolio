@@ -1,5 +1,10 @@
 /* ============================= Start Get Projects Data From JSON File "data.json" ============================= */
 let otherProjects = [];
+const categoryLabels = {
+    web_developer: "Front-End",
+    artificial_intelligence: "Artificial Intelligence",
+    data_analysis: "Data Analysis"
+};
 
 export function renderProjects(projectsData) {
     if (!projectsData) return;
@@ -18,20 +23,30 @@ function renderCaseStudies(caseStudies) {
     const fragment = document.createDocumentFragment();
     caseStudies.forEach((study) => {
         const card = document.createElement("article");
-        card.classList.add("project-card");
+        card.classList.add("version-card", "project-showcase-card");
 
-        const figure = createProjectImage(study);
-        const content = document.createElement("div");
-        content.classList.add("project-card-content");
+        const figure = createVersionImage(study, `${study.title} preview`);
 
-        const title = document.createElement("h2");
+        const title = document.createElement("h4");
         title.textContent = study.title;
+
+        const label = document.createElement("span");
+        label.classList.add("version-label");
+        label.textContent = "Use Case";
 
         const desc = document.createElement("p");
         desc.textContent = study.description;
 
+        const list = document.createElement("ul");
+        list.classList.add("version-highlights");
+        (study.details?.tech_stack || []).slice(0, 3).forEach((item) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<i class="bi bi-check2-circle"></i><span>${item}</span>`;
+            list.appendChild(li);
+        });
+
         const actionRow = document.createElement("div");
-        actionRow.classList.add("case-actions-row");
+        actionRow.classList.add("version-actions");
 
         const githubLink = document.createElement("a");
         githubLink.href = study.github_link;
@@ -40,16 +55,26 @@ function renderCaseStudies(caseStudies) {
         githubLink.classList.add("project-link", "project-link--github");
         githubLink.innerHTML = '<i class="bi bi-github"></i><span class="link-text">GitHub</span>';
 
+        const linksFragment = document.createDocumentFragment();
+        if (study.live_demo) {
+            const demoLink = document.createElement("a");
+            demoLink.href = study.live_demo;
+            demoLink.target = "_blank";
+            demoLink.rel = "noopener noreferrer";
+            demoLink.classList.add("project-link", "project-link--demo");
+            demoLink.innerHTML = '<i class="bi bi-box-arrow-up-right"></i><span class="link-text">Live Demo</span>';
+            linksFragment.appendChild(demoLink);
+        }
+        linksFragment.appendChild(githubLink);
+
         const detailsButton = document.createElement("button");
         detailsButton.type = "button";
         detailsButton.classList.add("case-details-btn");
-        detailsButton.textContent = "View Model";
         detailsButton.dataset.caseStudy = JSON.stringify(study);
-        detailsButton.innerHTML = '<i class="bi bi-eye"></i><span>View Model</span>';
+        detailsButton.innerHTML = '<i class="bi bi-eye"></i><span>View Details</span>';
 
-        actionRow.append(githubLink, detailsButton);
-        content.append(title, desc, actionRow);
-        card.append(figure, content);
+        actionRow.append(linksFragment, detailsButton);
+        card.append(figure, title, label, desc, list, actionRow);
         fragment.appendChild(card);
     });
 
@@ -137,31 +162,33 @@ function renderOtherProjects(projects) {
 
 function createOtherProjectCard(proj) {
     const card = document.createElement("article");
-    card.classList.add("project-card");
+    card.classList.add("version-card", "project-showcase-card");
     card.dataset.category = proj.category || "all";
 
-    const figure = createProjectImage(proj);
-    const cardContent = document.createElement("div");
-    cardContent.classList.add("project-card-content");
+    const figure = createVersionImage(proj, proj.alt || proj.title);
 
-    const title = document.createElement("h2");
+    const title = document.createElement("h4");
     title.textContent = proj.title;
+
+    const label = document.createElement("span");
+    label.classList.add("version-label");
+    label.textContent = categoryLabels[proj.category] || "Project";
 
     const desc = document.createElement("p");
     desc.textContent = proj.description;
 
-    const tags = document.createElement("div");
-    tags.classList.add("skills-proj");
-    (proj.tags || []).forEach((tag) => {
-        const span = document.createElement("span");
-        span.classList.add("tags");
-        span.textContent = tag;
-        tags.appendChild(span);
+    const tags = document.createElement("ul");
+    tags.classList.add("version-highlights");
+    (proj.tags || []).slice(0, 4).forEach((tag) => {
+        const li = document.createElement("li");
+        li.innerHTML = `<i class="bi bi-check2-circle"></i><span>${tag}</span>`;
+        tags.appendChild(li);
     });
 
     const links = createProjectLinks(proj);
-    cardContent.append(title, desc, tags, links);
-    card.append(figure, cardContent);
+    links.classList.remove("links");
+    links.classList.add("version-actions");
+    card.append(figure, title, label, desc, tags, links);
     return card;
 }
 
@@ -172,6 +199,19 @@ function createProjectImage(project) {
     const img = document.createElement("img");
     img.src = project.image;
     img.alt = project.alt || project.title;
+    img.loading = "lazy";
+
+    figure.appendChild(img);
+    return figure;
+}
+
+function createVersionImage(project, altText) {
+    const figure = document.createElement("figure");
+    figure.classList.add("version-image");
+
+    const img = document.createElement("img");
+    img.src = project.image;
+    img.alt = altText || project.title;
     img.loading = "lazy";
 
     figure.appendChild(img);
@@ -237,7 +277,7 @@ function setupFilterButtons() {
 }
 
 function filterOtherProjects(category) {
-    const cards = document.querySelectorAll(".cards-project .project-card");
+    const cards = document.querySelectorAll(".cards-project .project-showcase-card");
     cards.forEach((card) => {
         const shouldShow = category === "all" || card.dataset.category === category;
         card.classList.toggle("hidden", !shouldShow);
@@ -277,6 +317,7 @@ function fillModal(caseStudy) {
     const challenges = document.getElementById("modal-case-challenges");
     const stack = document.getElementById("modal-case-stack");
     const repoLink = document.getElementById("modal-case-repo");
+    const demoLink = document.getElementById("modal-case-demo");
 
     if (title) title.textContent = caseStudy.title || "";
     if (image) {
@@ -302,6 +343,17 @@ function fillModal(caseStudy) {
     if (repoLink) {
         repoLink.href = caseStudy.github_link || "#";
         repoLink.classList.add("project-link--github");
+    }
+
+    if (demoLink) {
+        if (caseStudy.live_demo) {
+            demoLink.href = caseStudy.live_demo;
+            demoLink.style.display = "inline-flex";
+            demoLink.classList.add("project-link--demo");
+        } else {
+            demoLink.removeAttribute("href");
+            demoLink.style.display = "none";
+        }
     }
 }
 /* ============================= End Get Projects Data From JSON File "data.json" ============================= */

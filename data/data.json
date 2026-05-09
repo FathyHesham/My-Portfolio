@@ -138,6 +138,30 @@
 	"projects": {
 		"case_studies": [
 			{
+				"image": "assets/images/img-projects/travel-advisor-application.webp",
+				"alt": "Travel Advisor Application",
+				"title": "Travel Advisor Application",
+				"description": "Interactive travel dashboard for discovering restaurants, hotels, and attractions through a synchronized list-and-map experience.",
+				"live_demo": "https://travel-advisor-application-liart.vercel.app/",
+				"github_link": "https://github.com/FathyHesham/Travel-Advisor-Application",
+				"details": {
+					"overview": "A responsive React application that helps users explore travel-related places through a clean split-screen interface combining search, filtering, and interactive maps.",
+					"problem": "Travel discovery platforms often overwhelm users with scattered information and weak navigation between results and location context, making it harder to compare places quickly.",
+					"solution": "Built a travel dashboard powered by the Travel Advisor API, where users can browse restaurants, hotels, and attractions, filter by category and rating, and switch smoothly between place cards and Leaflet map markers with synchronized selection.",
+					"tech_stack": [
+						"React 19",
+						"Vite",
+						"Tailwind CSS 4",
+						"React Leaflet",
+						"Leaflet",
+						"RapidAPI",
+						"Travel Advisor API"
+					],
+					"results": "Delivered a fast and responsive browsing experience that makes place discovery more intuitive, with richer decision-making support through ratings, reviews, pricing, awards, and direct external links.",
+					"challenges": "Handled API inconsistency by normalizing place data into a unified structure, improved resilience with loading and retry states, and designed the UI so list interactions and map focus stay aligned across devices."
+				}
+			},
+			{
 				"image": "assets/images/img-projects/nail-diseases-detection.png",
 				"alt": "Nail Diseases Detection Using Image Processing & Deep Learning",
 				"title": "Nail Diseases Detection Using Image Processing & Deep Learning",
@@ -214,7 +238,7 @@
 				{
 					"version": "v1.0",
 					"label": "Foundation",
-					"image": "assets/images/img-projects/to-do-list-v1.0.png",
+					"image": "assets/images/img-projects/to-do-list-v1.0.webp",
 					"description": "Basic task management with create/delete flow and local state handling.",
 					"highlights": [
 						"Core CRUD interactions",
@@ -227,7 +251,7 @@
 				{
 					"version": "v2.0",
 					"label": "Usability Upgrade",
-					"image": "assets/images/img-projects/to-do-list-v2.0.jpeg",
+					"image": "assets/images/img-projects/to-do-list-v2.0.webp",
 					"description": "Focused on smoother interactions, cleaner UX, and better organization for daily use.",
 					"highlights": [
 						"Improved interactions and animations",
@@ -240,7 +264,7 @@
 				{
 					"version": "v3.0",
 					"label": "Modern Experience",
-					"image": "assets/images/img-projects/to-do-list-v3.0.jpeg",
+					"image": "assets/images/img-projects/to-do-list-v3.0.webp",
 					"description": "Modernized design system and stronger scalability for future enhancements.",
 					"highlights": [
 						"More modern and polished UI",
@@ -255,7 +279,7 @@
 		"other_projects": [
 			{
 				"category": "web_developer",
-				"image": "assets/images/img-projects/quiz-online-website-application.png",
+				"image": "assets/images/img-projects/quiz-online-website-application.webp",
 				"alt": "Quiz Online Website Application",
 				"title": "Quiz Online Website Application v1.0",
 				"description": "Interactive front-end quiz app with timer, feedback flow, and responsive design.",
