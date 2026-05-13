@@ -166,7 +166,7 @@
 				"alt": "Nail Diseases Detection Using Image Processing & Deep Learning",
 				"title": "Nail Diseases Detection Using Image Processing & Deep Learning",
 				"description": "AI diagnostic system for nail diseases built with CNN architectures and deployed through Flask.",
-				"github_link": "https://github.com/FathyHesham/Nail-Diseases-Detection-System-Graduation-Project-",
+				"github_link": "https://github.com/FathyHesham/Nail-Diseases-Detection-System-Graduation-Project",
 				"details": {
 					"overview": "A deep learning-based system designed to detect nail diseases from medical images and support early diagnosis.",
 					"problem": "Manual diagnosis requires expertise and time, so users need a faster and more accessible solution.",
