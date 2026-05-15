@@ -1,6 +1,55 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-
 /* ========================= Start General Variable ========================= */
+:root {}
+
+/* ========================= Local Fonts ========================= */
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../assets/fonts/RobotoSlab-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../assets/fonts/RobotoSlab-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../assets/fonts/RobotoSlab-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../assets/fonts/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../assets/fonts/RobotoSlab-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lobster Two';
+    src: url('../assets/fonts/LobsterTwo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --primary: #60a5fa;
     --primary-dark: #2563eb;
@@ -97,7 +146,7 @@ html {
 }
 
 body {
-    font-family: "Libertinus Serif Display";
+    font-family: 'Roboto Slab', serif;
     font-size: 1.6rem;
     line-height: 1.6;
     color: var(--text-primary);
@@ -140,7 +189,7 @@ ul {
 }
 
 img {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     display: block;
 }
