@@ -129,7 +129,7 @@
 		},
 		{
 			"skill_name": "VS Code",
-			"skill_icon": "img:assets/images/vs-code.svg",
+			"skill_icon": "img:assets/images/vscode.webp",
 			"alt": "VS Code",
 			"color": "#007ACC",
 			"category": "tools"
@@ -138,7 +138,7 @@
 	"projects": {
 		"case_studies": [
 			{
-				"image": "assets/images/img-projects/travel-advisor-application.webp",
+				"image": "assets/images/img-projects/travel-advisor-application.avif",
 				"alt": "Travel Advisor Application",
 				"title": "Travel Advisor Application",
 				"description": "Interactive travel dashboard for discovering restaurants, hotels, and attractions through a synchronized list-and-map experience.",
@@ -162,7 +162,7 @@
 				}
 			},
 			{
-				"image": "assets/images/img-projects/nail-diseases-detection.png",
+				"image": "assets/images/img-projects/nail-diseases-detection.avif",
 				"alt": "Nail Diseases Detection Using Image Processing & Deep Learning",
 				"title": "Nail Diseases Detection Using Image Processing & Deep Learning",
 				"description": "AI diagnostic system for nail diseases built with CNN architectures and deployed through Flask.",
@@ -186,7 +186,7 @@
 				}
 			},
 			{
-				"image": "assets/images/img-projects/rag-system-application.png",
+				"image": "assets/images/img-projects/rag-system-application.avif",
 				"alt": "DEPI Chatbot RAG System",
 				"title": "DEPI Chatbot - RAG System",
 				"description": "Context-aware chatbot that combines retrieval and generation to answer DEPI initiative questions accurately.",
@@ -209,7 +209,7 @@
 				}
 			},
 			{
-				"image": "assets/images/img-projects/text-summarization-using-nlp.png",
+				"image": "assets/images/img-projects/text-summarization-using-nlp.avif",
 				"alt": "Text Summarization Using NLP",
 				"title": "Text Summarization Using NLP",
 				"description": "Transformer-powered summarization app for long text and dialogue with fast, coherent output.",
@@ -238,7 +238,7 @@
 				{
 					"version": "v1.0",
 					"label": "Foundation",
-					"image": "assets/images/img-projects/to-do-list-v1.0.webp",
+					"image": "assets/images/img-projects/to-do-list-v1.0.avif",
 					"description": "Basic task management with create/delete flow and local state handling.",
 					"highlights": [
 						"Core CRUD interactions",
@@ -251,7 +251,7 @@
 				{
 					"version": "v2.0",
 					"label": "Usability Upgrade",
-					"image": "assets/images/img-projects/to-do-list-v2.0.webp",
+					"image": "assets/images/img-projects/to-do-list-v2.0.avif",
 					"description": "Focused on smoother interactions, cleaner UX, and better organization for daily use.",
 					"highlights": [
 						"Improved interactions and animations",
@@ -264,7 +264,7 @@
 				{
 					"version": "v3.0",
 					"label": "Modern Experience",
-					"image": "assets/images/img-projects/to-do-list-v3.0.webp",
+					"image": "assets/images/img-projects/to-do-list-v3.0.avif",
 					"description": "Modernized design system and stronger scalability for future enhancements.",
 					"highlights": [
 						"More modern and polished UI",
@@ -279,7 +279,7 @@
 		"other_projects": [
 			{
 				"category": "web_developer",
-				"image": "assets/images/img-projects/quiz-online-website-application.webp",
+				"image": "assets/images/img-projects/quiz-online-website-application.avif",
 				"alt": "Quiz Online Website Application",
 				"title": "Quiz Online Website Application v1.0",
 				"description": "Interactive front-end quiz app with timer, feedback flow, and responsive design.",
@@ -296,7 +296,7 @@
 			},
 			{
 				"category": "artificial_intelligence",
-				"image": "assets/images/img-projects/generate-caption-image.png",
+				"image": "assets/images/img-projects/generate-caption-image.avif",
 				"alt": "Generate Caption of Image",
 				"title": "Generate Caption of Image",
 				"description": "Vision + NLP app using transformer models to generate captions from image input.",
@@ -312,7 +312,7 @@
 			},
 			{
 				"category": "data_analysis",
-				"image": "assets/images/img-projects/superstore-exploratory-data-analysis.png",
+				"image": "assets/images/img-projects/superstore-exploratory-data-analysis.avif",
 				"alt": "Superstore Exploratory Data Analysis",
 				"title": "Superstore Exploratory Data Analysis",
 				"description": "Business-oriented EDA with actionable insights, feature engineering, and clear visual reporting.",
@@ -328,7 +328,7 @@
 			},
 			{
 				"category": "data_analysis",
-				"image": "assets/images/img-projects/twitter-sentiment-analysis.png",
+				"image": "assets/images/img-projects/twitter-sentiment-analysis.avif",
 				"alt": "Twitter Sentiment Analysis",
 				"title": "Twitter Sentiment Analysis",
 				"description": "Sentiment modeling pipeline using NLP preprocessing and analytics-driven visual insights.",
@@ -345,7 +345,7 @@
 	},
 	"certifications": [
 		{
-			"image": "assets/images/img-certification/Front-End Certification.jpg",
+			"image": "assets/images/img-certification/Front-End Certification.avif",
 			"alt": "The Web Front End Learning Guide Certification From Udemy",
 			"title": "The Web Front End Learning Guide",
 			"from": "Udemy",
@@ -353,7 +353,7 @@
 			"show_certificate": "https://www.udemy.com/certificate/UC-f6ed961f-9767-4841-b178-337bdc6324b1/"
 		},
 		{
-			"image": "assets/images/img-certification/Microsoft Machine Learning Engineer Training Certification.jpg",
+			"image": "assets/images/img-certification/Microsoft Machine Learning Engineer Training Certification.avif",
 			"alt": "Microsoft Machine Learning Engineer Training Certification",
 			"title": "Microsoft Machine Learning Engineer Training",
 			"from": "Ministry of Communications and Information Technology",
@@ -361,7 +361,7 @@
 			"show_certificate": "https://drive.google.com/file/d/1O2OWqAf_M9f0Odjoqd70N_hQcX2rAKdA/view"
 		},
 		{
-			"image": "assets/images/img-certification/Intro to LLMs Certification.png",
+			"image": "assets/images/img-certification/Intro to LLMs Certification.avif",
 			"alt": "Introduction To LLMs Certificate from 365 DataScience",
 			"title": "Introduction To LLMs",
 			"from": "365 DataScience",
@@ -369,7 +369,7 @@
 			"show_certificate": "https://learn.365datascience.com/certificates/CC-DEAFF4E5FA/"
 		},
 		{
-			"image": "assets/images/img-certification/Intro to NLP for AI Certification.png",
+			"image": "assets/images/img-certification/Intro to NLP for AI Certification.avif",
 			"alt": "Introduction To NLP For AI Certificate from 365 DataScience",
 			"title": "Introduction To NLP For A",
 			"from": "365 DataScience",
@@ -377,7 +377,7 @@
 			"show_certificate": "https://learn.365datascience.com/certificates/CC-C3BDB6D2FF/"
 		},
 		{
-			"image": "assets/images/img-certification/ALX AiCE AI Career Essentials Certificate.png",
+			"image": "assets/images/img-certification/ALX AiCE AI Career Essentials Certificate.avif",
 			"alt": "ALX AiCE AI Career Essentials Certificate",
 			"title": "ALX AiCE-AI Career Essentials",
 			"from": "alx_africa",
@@ -385,7 +385,7 @@
 			"show_certificate": "https://savanna.alxafrica.com/certificates/YGpRHCT7zh"
 		},
 		{
-			"image": "assets/images/img-certification/Supervised Machine Learning_ Regression and Classification Certification.png",
+			"image": "assets/images/img-certification/Supervised Machine Learning_ Regression and Classification Certification.avif",
 			"alt": "Supervised Machine Learning Certificate from Stanford University",
 			"title": "Supervised Machine Learning - Regression and Classification",
 			"from": "Stanford University ONLINE",
@@ -393,7 +393,7 @@
 			"show_certificate": "https://www.coursera.org/account/accomplishments/verify/U553Y8JAMNPU?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
 		},
 		{
-			"image": "assets/images/img-certification/Database Fundamentals Certification.png",
+			"image": "assets/images/img-certification/Database Fundamentals Certification.avif",
 			"alt": "Database Fundamentals Certificate from Mahara Tech",
 			"title": "Database Fundamentals",
 			"from": "Mahara Tech",
@@ -401,7 +401,7 @@
 			"show_certificate": "https://drive.google.com/file/d/1aQgd5OE_61lZKAU_S1PiMvJpOJcH7cI3/view"
 		},
 		{
-			"image": "assets/images/img-certification/Python for Data Science and Machine Learning Certification.jpg",
+			"image": "assets/images/img-certification/Python for Data Science and Machine Learning Certification.avif",
 			"alt": "Python for Data Science and Machine Learning Certificate from Udemy",
 			"title": "Python for Data Science and Machine Learning",
 			"from": "Udemy",
@@ -409,7 +409,7 @@
 			"show_certificate": "https://www.udemy.com/certificate/UC-e34b0e93-8757-4700-9f71-19d4f2660349/"
 		},
 		{
-			"image": "assets/images/img-certification/The Python Language Guide Certification.jpg",
+			"image": "assets/images/img-certification/The Python Language Guide Certification.avif",
 			"alt": "Python and Django Learning Guide Certificate from Udemy",
 			"title": "The Python and Django Learning Guide",
 			"from": "Udemy",
@@ -417,7 +417,7 @@
 			"show_certificate": "https://www.udemy.com/certificate/UC-1dde8d55-2bf8-4e87-99b4-73a0cb8feadd/"
 		},
 		{
-			"image": "assets/images/img-certification/Introduction To Computer Vision Certification.jpg",
+			"image": "assets/images/img-certification/Introduction To Computer Vision Certification.avif",
 			"alt": "Introduction To Computer Vision Certificate from ITI",
 			"title": "Introduction To Computer Vision",
 			"from": "Information Technology Institute (ITI)",
