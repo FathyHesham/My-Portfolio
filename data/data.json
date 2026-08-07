@@ -1,23 +1,26 @@
 {
 	"experiences": [
 		{
+			"title": "Frontend AI Trainer",
+			"place": "Outlier",
+			"category": "frontend",
+			"date": "November 2025 – Present",
+			"status": "Remote (Freelance)",
+			"description": "Reviewed and evaluated AI-generated frontend code HTML5, CSS3, Javascript, Typescript, React, and Tailwind CSS for technical accuracy, logical consistency, and code quality. Developed clear rating criteria to assess how well large language models (LLMs) handle complex frontend programming tasks. Provided detailed technical feedback and training data to help AI models better understand code structure, debug errors, and follow modern web development best practices.",
+			"projects": []
+		},
+		{
 			"title": "Machine Learning Engineer",
+			"place": "Egypt’s Ministry of Communications and Information Technology - DEPI",
+			"category": "ai",
 			"date": "April 2024 – November 2024",
 			"status": "Training",
-			"description": "Built and implemented machine learning solutions under the Digital Egypt Pioneers Initiative, including ML, DL, and NLP systems. Worked on 4 key projects: RAG System (DEPI Chatbot), Superstore Exploratory Data Analysis, Generate Caption of Image, and Text Summarization Using NLP. Implemented data preprocessing pipelines, developed and evaluated predictive models on real-world datasets, and applied statistical concepts to optimize model accuracy. Utilized Python, Scikit-learn, and TensorFlow to architect and deploy machine learning solutions.",
+			"description": "Contributed to the design and development of advanced Artificial Intelligence solutions as part of the Digital Egypt Pioneers Initiative (DEPI), under the supervision of Egypt’s Ministry of Communications and Information Technology (MCIT), with a focus on Machine Learning (ML), Deep Learning (DL), and Natural Language Processing (NLP). Designed and implemented data preprocessing pipelines, developed and evaluated predictive models using real-world datasets, and applied statistical methodologies to enhance model accuracy and overall performance. Leveraged Python, Scikit-learn, and TensorFlow to build, optimize, and deploy scalable AI solutions tailored for real-world applications.",
 			"projects": [
 				"RAG System – DEPI Chatbot",
 				"Superstore Exploratory Data Analysis",
 				"Generate Caption of Image",
 				"Text Summarization Using NLP"
-			],
-			"techStack": [
-				"Python",
-				"Scikit-learn",
-				"TensorFlow",
-				"Machine Learning",
-				"Deep Learning",
-				"NLP"
 			]
 		}
 	],
@@ -27,42 +30,42 @@
 			"skill_icon": "fa-brands fa-html5",
 			"alt": "HTML5",
 			"color": "#E34F26",
-			"category": "software"
+			"category": "frontend"
 		},
 		{
 			"skill_name": "CSS3",
 			"skill_icon": "fa-brands fa-css3-alt",
 			"alt": "CSS3",
 			"color": "#1572B6",
-			"category": "software"
+			"category": "frontend"
 		},
 		{
-			"skill_name": "JavaScript ES6",
+			"skill_name": "JavaScript ES6+",
 			"skill_icon": "fa-brands fa-js",
 			"alt": "JavaScript",
 			"color": "#F7DF1E",
-			"category": "software"
+			"category": "frontend"
 		},
 		{
 			"skill_name": "Bootstrap",
 			"skill_icon": "fa-brands fa-bootstrap",
 			"alt": "Bootstrap",
 			"color": "#7952B3",
-			"category": "software"
+			"category": "frontend"
 		},
 		{
 			"skill_name": "TypeScript",
 			"skill_icon": "fa-brands fa-js",
 			"alt": "TypeScript",
 			"color": "#3178c6",
-			"category": "software"
+			"category": "frontend"
 		},
 		{
 			"skill_name": "React-Js",
 			"skill_icon": "fa-brands fa-react",
 			"alt": "React-Js",
 			"color": "#61DAFB",
-			"category": "software"
+			"category": "frontend"
 		},
 		{
 			"skill_name": "Python",
@@ -111,7 +114,7 @@
 			"skill_icon": "fa-solid fa-database",
 			"alt": "Database & SQL",
 			"color": "#F59E0B",
-			"category": "software"
+			"category": "tools"
 		},
 		{
 			"skill_name": "Git",
@@ -151,7 +154,7 @@
 					"tech_stack": [
 						"React 19",
 						"Vite",
-						"Tailwind CSS 4",
+						"Tailwind CSS",
 						"React Leaflet",
 						"Leaflet",
 						"RapidAPI",
@@ -179,97 +182,54 @@
 						"Image Processing",
 						"Flask",
 						"HTML",
-						"CSS"
+						"CSS",
+						"JavaScript"
 					],
 					"results": "Reached 89% accuracy and delivered a practical tool for faster preliminary diagnosis.",
 					"challenges": "Handled image quality and lighting variations with augmentation and improved model selection through experimentation."
-				}
-			},
-			{
-				"image": "assets/images/img-projects/rag-system-application.avif",
-				"alt": "DEPI Chatbot RAG System",
-				"title": "DEPI Chatbot - RAG System",
-				"description": "Context-aware chatbot that combines retrieval and generation to answer DEPI initiative questions accurately.",
-				"github_link": "https://github.com/FathyHesham/DEPI_CHATBOT_PROJECT",
-				"details": {
-					"overview": "RAG chatbot that retrieves relevant context then generates grounded answers using LLMs.",
-					"problem": "DEPI information is distributed across sources, making accurate search and support difficult.",
-					"solution": "Used embeddings and vector search to retrieve documents, then passed context to an LLM for reliable answers.",
-					"tech_stack": [
-						"Python",
-						"LangChain",
-						"LLMs",
-						"Vector DB",
-						"Hugging Face",
-						"Embeddings",
-						"Streamlit"
-					],
-					"results": "Improved answer relevance and reduced manual effort in finding DEPI information.",
-					"challenges": "Optimized retrieval quality and balanced factual grounding with natural conversational output."
-				}
-			},
-			{
-				"image": "assets/images/img-projects/text-summarization-using-nlp.avif",
-				"alt": "Text Summarization Using NLP",
-				"title": "Text Summarization Using NLP",
-				"description": "Transformer-powered summarization app for long text and dialogue with fast, coherent output.",
-				"github_link": "https://github.com/FathyHesham/Text-Summarization-Project",
-				"details": {
-					"overview": "NLP application that summarizes long inputs into concise and meaningful outputs.",
-					"problem": "Long text and dialogue are time-consuming to process manually and difficult to scale.",
-					"solution": "Built with BART-SAMSum, preprocessing, and Streamlit UI to generate quality summaries quickly.",
-					"tech_stack": [
-						"Python",
-						"PyTorch",
-						"Hugging Face Transformers",
-						"BART-SAMSum",
-						"NLP",
-						"Streamlit"
-					],
-					"results": "Produced coherent summaries that reduced reading time while preserving key information.",
-					"challenges": "Managed sequence-length limits and improved summary coherence for conversational inputs."
 				}
 			}
 		],
 		"evaluation_project": {
 			"title": "To-Do List Application Evolution",
-			"summary": "Professional comparison between v1.0, v2.0, and v3.0 to show how architecture, UX, and features improved across versions.",
+			"summary": "A three-stage rebuild — from vanilla JavaScript DOM manipulation, to a typed OOP architecture, to a full React component system — each version rewritten from scratch to apply a new set of engineering principles.",
 			"versions": [
 				{
 					"version": "v1.0",
-					"label": "Foundation",
+					"label": "Vanilla JS Foundation",
 					"image": "assets/images/img-projects/to-do-list-v1.0.avif",
-					"description": "Basic task management with create/delete flow and local state handling.",
+					"description": "Built entirely with Vanilla JavaScript and direct DOM manipulation — no frameworks, no build tools. Established core task management (add, edit, complete, delete) with LocalStorage persistence in a single-file structure.",
 					"highlights": [
-						"Core CRUD interactions",
-						"Simple task list layout",
-						"First stable release"
+						"Pure JavaScript (ES6+) with direct DOM manipulation",
+						"LocalStorage persistence, framework-free",
+						"Single-file structure — zero build tools"
 					],
 					"github_link": "https://github.com/FathyHesham/TO-DO-List-Application-v1.0",
 					"live_demo": "https://fathyhesham.github.io/TO-DO-List-Application-v1.0/"
 				},
 				{
 					"version": "v2.0",
-					"label": "Usability Upgrade",
+					"label": "TypeScript & OOP Refactor",
 					"image": "assets/images/img-projects/to-do-list-v2.0.avif",
-					"description": "Focused on smoother interactions, cleaner UX, and better organization for daily use.",
+					"description": "Rebuilt from scratch in TypeScript, applying Object-Oriented Programming with Classes and Generics. Split the single-file codebase into distinct layers — types, DOM access, storage service, business logic, and UI rendering.",
 					"highlights": [
-						"Improved interactions and animations",
-						"Better visual hierarchy",
-						"Cleaner structure and maintainability"
+						"Migrated from JavaScript to TypeScript with Interfaces & Generics",
+						"OOP principles — business logic isolated from UI and DOM layers",
+						"Modular six-layer architecture (types / dom / services / core / ui / app)"
 					],
 					"github_link": "https://github.com/FathyHesham/To-Do-List-Application-v2.0",
 					"live_demo": "https://fathyhesham.github.io/To-Do-List-Application-v2.0/"
 				},
 				{
 					"version": "v3.0",
-					"label": "Modern Experience",
+					"label": "React Architecture",
 					"image": "assets/images/img-projects/to-do-list-v3.0.avif",
-					"description": "Modernized design system and stronger scalability for future enhancements.",
+					"description": "Fully migrated to React 19 with TypeScript and Vite, replacing manual DOM rendering with a component-based architecture. Introduced Context API with a custom hook to eliminate prop drilling, useMemo-optimized filtering, and a fully Arabic RTL interface.",
 					"highlights": [
-						"More modern and polished UI",
-						"Enhanced performance and responsiveness",
-						"Preparation for advanced feature expansion"
+						"Component-based React 19 architecture, replacing manual DOM rendering",
+						"Context API + custom hook (useTasksContext) — zero prop drilling",
+						"useMemo-optimized filtering, auto-synced LocalStorage via useEffect",
+						"Fully Arabic UI with RTL support and priority-based color coding"
 					],
 					"github_link": "https://github.com/FathyHesham/TO-DO-List-Application-v3.0",
 					"live_demo": "https://to-do-list-application-v3-0.vercel.app/"
@@ -283,14 +243,7 @@
 				"alt": "Quiz Online Website Application",
 				"title": "Quiz Online Website Application",
 				"description": "Interactive front-end quiz app with timer, feedback flow, and responsive design.",
-				"tags": [
-					"HTML5",
-					"CSS3",
-					"JavaScript ES6",
-					"Fetch API",
-					"Bootstrap",
-					"Responsive Layout"
-				],
+				"tags": ["HTML5", "CSS3", "JavaScript ES6", "Fetch API", "Bootstrap", "Responsive Layout"],
 				"github_link": "https://github.com/FathyHesham/Quiz-Online-Website-Application-v1.0",
 				"live_demo": "https://fathyhesham.github.io/Quiz-Online-Website-Application-v1.0/"
 			},
@@ -300,14 +253,7 @@
 				"alt": "Generate Caption of Image",
 				"title": "Generate Caption of Image",
 				"description": "Vision + NLP app using transformer models to generate captions from image input.",
-				"tags": [
-					"Python",
-					"PyTorch",
-					"Transformers",
-					"Computer Vision",
-					"NLP",
-					"Streamlit"
-				],
+				"tags": ["Python", "PyTorch", "Transformers", "Computer Vision", "NLP", "Streamlit"],
 				"github_link": "https://github.com/FathyHesham/Virtual-Question-Answering-Generate-Caption-Of-Image"
 			},
 			{
@@ -316,14 +262,7 @@
 				"alt": "Superstore Exploratory Data Analysis",
 				"title": "Superstore Exploratory Data Analysis",
 				"description": "Business-oriented EDA with actionable insights, feature engineering, and clear visual reporting.",
-				"tags": [
-					"Data Analysis",
-					"Pandas",
-					"EDA",
-					"Python",
-					"NumPy",
-					"Data Visualization"
-				],
+				"tags": ["Data Analysis", "Pandas", "EDA", "Python", "NumPy", "Data Visualization"],
 				"github_link": "https://github.com/FathyHesham/Superstore-Exploratory-Data-Analysis-EDA-"
 			},
 			{
@@ -332,14 +271,41 @@
 				"alt": "Twitter Sentiment Analysis",
 				"title": "Twitter Sentiment Analysis",
 				"description": "Sentiment modeling pipeline using NLP preprocessing and analytics-driven visual insights.",
-				"tags": [
-					"NLP",
-					"Pandas",
-					"Python",
-					"Sentiment Analysis",
-					"Data Visualization"
-				],
+				"tags": ["NLP", "Pandas", "Python", "Sentiment Analysis", "Data Visualization"],
 				"github_link": "https://github.com/FathyHesham/Twitter_Sentiment_Analysis"
+			},
+			{
+				"category": "artificial_intelligence",
+				"image": "assets/images/img-projects/rag-system-application.avif",
+				"alt": "DEPI Chatbot RAG System",
+				"title": "DEPI Chatbot - RAG System",
+				"description": "Context-aware chatbot that combines retrieval and generation to answer DEPI initiative questions accurately.",
+				"tags": [
+					"Python",
+					"LangChain",
+					"LLMs",
+					"Vector DB",
+					"Hugging Face",
+					"Embeddings",
+					"Streamlit"
+				],
+				"github_link": "https://github.com/FathyHesham/DEPI_CHATBOT_PROJECT"
+			},
+			{
+				"category": "artificial_intelligence",
+				"image": "assets/images/img-projects/text-summarization-using-nlp.avif",
+				"alt": "Text Summarization Using NLP",
+				"title": "Text Summarization Using NLP",
+				"description": "Transformer-powered summarization app for long text and dialogue with fast, coherent output.",
+				"tags": [
+					"Python",
+					"PyTorch",
+					"Hugging Face Transformers",
+					"BART-SAMSum",
+					"NLP",
+					"Streamlit"
+				],
+				"github_link": "https://github.com/FathyHesham/Text-Summarization-Project"
 			}
 		]
 	},
@@ -348,6 +314,7 @@
 			"image": "assets/images/img-certification/Front-End Certification.avif",
 			"alt": "The Web Front End Learning Guide Certification From Udemy",
 			"title": "The Web Front End Learning Guide",
+			"category": "frontend",
 			"from": "Udemy",
 			"date": "2025",
 			"show_certificate": "https://www.udemy.com/certificate/UC-f6ed961f-9767-4841-b178-337bdc6324b1/"
@@ -356,6 +323,7 @@
 			"image": "assets/images/img-certification/Microsoft Machine Learning Engineer Training Certification.avif",
 			"alt": "Microsoft Machine Learning Engineer Training Certification",
 			"title": "Microsoft Machine Learning Engineer Training",
+			"category": "artificial_intelligence",
 			"from": "Ministry of Communications and Information Technology",
 			"date": "2024",
 			"show_certificate": "https://drive.google.com/file/d/1O2OWqAf_M9f0Odjoqd70N_hQcX2rAKdA/view"
@@ -364,6 +332,7 @@
 			"image": "assets/images/img-certification/Intro to LLMs Certification.avif",
 			"alt": "Introduction To LLMs Certificate from 365 DataScience",
 			"title": "Introduction To LLMs",
+			"category": "artificial_intelligence",
 			"from": "365 DataScience",
 			"date": "2024",
 			"show_certificate": "https://learn.365datascience.com/certificates/CC-DEAFF4E5FA/"
@@ -371,7 +340,8 @@
 		{
 			"image": "assets/images/img-certification/Intro to NLP for AI Certification.avif",
 			"alt": "Introduction To NLP For AI Certificate from 365 DataScience",
-			"title": "Introduction To NLP For A",
+			"title": "Introduction To NLP For AI",
+			"category": "artificial_intelligence",
 			"from": "365 DataScience",
 			"date": "2024",
 			"show_certificate": "https://learn.365datascience.com/certificates/CC-C3BDB6D2FF/"
@@ -380,6 +350,7 @@
 			"image": "assets/images/img-certification/ALX AiCE AI Career Essentials Certificate.avif",
 			"alt": "ALX AiCE AI Career Essentials Certificate",
 			"title": "ALX AiCE-AI Career Essentials",
+			"category": "artificial_intelligence",
 			"from": "alx_africa",
 			"date": "2024",
 			"show_certificate": "https://savanna.alxafrica.com/certificates/YGpRHCT7zh"
@@ -388,6 +359,7 @@
 			"image": "assets/images/img-certification/Supervised Machine Learning_ Regression and Classification Certification.avif",
 			"alt": "Supervised Machine Learning Certificate from Stanford University",
 			"title": "Supervised Machine Learning - Regression and Classification",
+			"category": "artificial_intelligence",
 			"from": "Stanford University ONLINE",
 			"date": "2024",
 			"show_certificate": "https://www.coursera.org/account/accomplishments/verify/U553Y8JAMNPU?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
@@ -396,6 +368,7 @@
 			"image": "assets/images/img-certification/Database Fundamentals Certification.avif",
 			"alt": "Database Fundamentals Certificate from Mahara Tech",
 			"title": "Database Fundamentals",
+			"category": "general",
 			"from": "Mahara Tech",
 			"date": "2024",
 			"show_certificate": "https://drive.google.com/file/d/1aQgd5OE_61lZKAU_S1PiMvJpOJcH7cI3/view"
@@ -404,6 +377,7 @@
 			"image": "assets/images/img-certification/Python for Data Science and Machine Learning Certification.avif",
 			"alt": "Python for Data Science and Machine Learning Certificate from Udemy",
 			"title": "Python for Data Science and Machine Learning",
+			"category": "artificial_intelligence",
 			"from": "Udemy",
 			"date": "2024",
 			"show_certificate": "https://www.udemy.com/certificate/UC-e34b0e93-8757-4700-9f71-19d4f2660349/"
@@ -412,6 +386,7 @@
 			"image": "assets/images/img-certification/The Python Language Guide Certification.avif",
 			"alt": "Python and Django Learning Guide Certificate from Udemy",
 			"title": "The Python and Django Learning Guide",
+			"category": "artificial_intelligence",
 			"from": "Udemy",
 			"date": "2024",
 			"show_certificate": "https://www.udemy.com/certificate/UC-1dde8d55-2bf8-4e87-99b4-73a0cb8feadd/"
@@ -420,6 +395,7 @@
 			"image": "assets/images/img-certification/Introduction To Computer Vision Certification.avif",
 			"alt": "Introduction To Computer Vision Certificate from ITI",
 			"title": "Introduction To Computer Vision",
+			"category": "artificial_intelligence",
 			"from": "Information Technology Institute (ITI)",
 			"date": "2022",
 			"show_certificate": "https://drive.google.com/file/d/1ksaktzfcwzRGYp1pMBJDDL9irTF0vSiJ/view"

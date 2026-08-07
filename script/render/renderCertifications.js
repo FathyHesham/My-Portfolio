@@ -1,38 +1,72 @@
 /* ============================= Start Get Certifications Data From JSON File "data.json" ============================= */
+
+function escapeHtml(text) {
+    return String(text || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+
+let allCertifications = [];
+
 export function renderCertifications(certifications) {
+    allCertifications = certifications || [];
     const container = document.querySelector(".cert-card");
-    const fragment = document.createDocumentFragment();
+    if (!container) return;
 
-    certifications.forEach(cert => {
-        const card = document.createElement("article");
-        card.classList.add("cert-content");
+    container.innerHTML = allCertifications.map(certCardTemplate).join("");
+    setupCertFilterButtons();
+}
 
-        const imgBox = document.createElement("div");
-        imgBox.classList.add("cert-img");
+function certCardTemplate(cert) {
+    const category = cert.category || "general";
 
-        const img = document.createElement("img");
-        img.src = cert.image;
-        img.alt = cert.alt || cert.title;
-        img.loading = "lazy";
-        imgBox.appendChild(img);
-
-        const title = document.createElement("h3");
-        title.textContent = cert.title;
-
-        const provider = document.createElement("p");
-        provider.textContent = `${cert.from} - ${cert.date}`;
-
-        const btn = document.createElement("a");
-        btn.href = cert.show_certificate;
-        btn.target = "_blank";
-        btn.rel = "noopener noreferrer";
-        btn.classList.add("cert-btn");
-        btn.textContent = "Show Certificate";
-
-        card.append(imgBox, title, provider, btn);
-        fragment.appendChild(card);
-    });
-
-    container.appendChild(fragment);
+    return `
+        <article class="cert-content" data-category="${escapeHtml(category)}">
+            <div class="cert-img">
+                <img src="${escapeHtml(cert.image)}" alt="${escapeHtml(cert.alt || cert.title)}" loading="lazy" />
+            </div>
+            <h3>${escapeHtml(cert.title)}</h3>
+            <p>${escapeHtml(cert.from)} - ${escapeHtml(cert.date)}</p>
+            <a href="${escapeHtml(cert.show_certificate)}" target="_blank" rel="noopener noreferrer" class="cert-btn">
+                Show Certificate
+            </a>
+        </article>
+    `;
 }
 /* ============================= End Get Certifications Data From JSON File "data.json" ============================= */
+
+/* ============================= Start Certifications Filter ============================= */
+function setupCertFilterButtons() {
+    const filterButtons = document.querySelectorAll(".certifications .filter-button");
+    if (!filterButtons.length) return;
+
+    const counts = { all: allCertifications.length, frontend: 0, artificial_intelligence: 0, general: 0 };
+    allCertifications.forEach((cert) => {
+        const category = cert.category || "general";
+        if (counts[category] !== undefined) counts[category] += 1;
+    });
+
+    filterButtons.forEach((button) => {
+        const filterValue = button.dataset.filter;
+        const countSpan = button.querySelector(".lenth-cert");
+        if (countSpan && counts[filterValue] !== undefined) {
+            countSpan.textContent = counts[filterValue];
+        }
+
+        button.addEventListener("click", () => {
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+            filterCertifications(filterValue);
+        });
+    });
+}
+
+function filterCertifications(category) {
+    const cards = document.querySelectorAll(".certifications .cert-content");
+    cards.forEach((card) => {
+        const shouldShow = category === "all" || card.dataset.category === category;
+        card.classList.toggle("hidden", !shouldShow);
+    });
+}
+/* ============================= End Certifications Filter ============================= */

@@ -12,7 +12,7 @@ export function renderSkills (skills) {
     }, {});
 
     // Order we want to display
-    const order = ['software', 'ai', 'tools', 'other'];
+    const order = ['frontend', 'ai', 'tools', 'other'];
 
     const container = document.createElement('div');
     container.classList.add('skills-groups');
@@ -26,7 +26,7 @@ export function renderSkills (skills) {
         const h = document.createElement('h4');
         h.classList.add('skills-group__title');
         // Friendly labels
-        const labels = { software: 'Software & Web', ai: 'AI / Data', tools: 'Tools & Platforms', other: 'Other' };
+        const labels = { frontend: 'Software & Web', ai: 'AI / Data', tools: 'Tools & Platforms', other: 'Other' };
         h.textContent = labels[cat] || cat;
 
         const grid = document.createElement('div');

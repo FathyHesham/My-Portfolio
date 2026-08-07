@@ -1,90 +1,85 @@
 /* ============================= Start Get Experience Data From JSON File "data.json" ============================= */
-export function renderExperiences (experiences) {
-    const card = document.querySelector(".cards-exper");
-    if (!card) return;
-    const fragment = document.createDocumentFragment();
 
-    experiences.forEach((exper) => {
-        const experCard = document.createElement("article");
-        experCard.classList.add("exp-card");
+// Small helper: escape data before injecting into innerHTML,
+// so a "&", "<", or ">" inside the JSON text can't break the markup.
+function escapeHtml(text) {
+    return String(text || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
 
-        const header = document.createElement("div");
-        header.classList.add("exp-card__header");
+// Category "frontend" or "ai" -> icon class shown in the round badge
+const CATEGORY_ICONS = {
+    frontend: "fa-solid fa-code",
+    ai: "fa-solid fa-brain"
+};
 
-        const title = document.createElement("h3");
-        title.classList.add("exp-card__title");
-        title.textContent = exper.title || "Experience";
+export function renderExperiences(experiences) {
+    const container = document.querySelector(".cards-exper");
+    if (!container) return;
 
-        const badge = document.createElement("span");
-        badge.classList.add("tags", "exp-card__badge");
-        badge.textContent = exper.status || "";
+    container.innerHTML = experiences.map(experienceCardTemplate).join("");
+}
 
-        const titleGroup = document.createElement("div");
-        titleGroup.classList.add("exp-card__title-group");
-        titleGroup.append(title, badge);
+function experienceCardTemplate(exper) {
+    const category = exper.category || "frontend";
+    const icon = CATEGORY_ICONS[category] || CATEGORY_ICONS.frontend;
+    const date = (exper.date || "").replace(/\s*\|\s*$/, "");
 
-        header.append(titleGroup);
-
-        const meta = document.createElement("div");
-        meta.classList.add("exp-card__meta");
-
-        const metaIcon = document.createElement("i");
-        metaIcon.classList.add("bi", "bi-calendar3");
-        metaIcon.setAttribute("aria-hidden", "true");
-
-        const date = document.createElement("time");
-        date.classList.add("exp-card__date");
-        const rawDate = (exper.date || "").replace(/\s*\|\s*$/, "");
-        date.textContent = rawDate;
-
-        meta.append(metaIcon, date);
-
-        const desc = document.createElement("p");
-        desc.classList.add("exp-card__desc");
-        desc.textContent = exper.description || "";
-
-        // Projects Section (render as inline chips to save vertical space)
-        let projectsHtml = "";
-        if (exper.projects && exper.projects.length > 0) {
-            projectsHtml = `
-                <div class="exp-card__projects">
-                    <h4 class="exp-card__projects-title">Projects Worked On:</h4>
-                    <div class="exp-card__projects-list">
-                        ${exper.projects.map(project => `<span class="exp-project-chip">${project}</span>`).join("")}
+    return `
+        <article class="exp-card" data-category="${category}">
+            <div class="exp-card__header">
+                <div class="exp-card__header-main">
+                    <span class="exp-card__icon">
+                        <i class="${icon}" aria-hidden="true"></i>
+                    </span>
+                    <div class="exp-card__title-group">
+                        <h3 class="exp-card__title">${escapeHtml(exper.title || "Experience")}</h3>
+                        <p class="exp-card__place">${escapeHtml(exper.place || "")}</p>
                     </div>
                 </div>
-            `;
-        }
+                <span class="tags exp-card__badge">${escapeHtml(exper.status || "")}</span>
+            </div>
 
-        // Tech Stack Section
-        let techStackHtml = "";
-        if (exper.techStack && exper.techStack.length > 0) {
-            techStackHtml = `
-                <div class="exp-card__tech-stack">
-                    <h4 class="exp-card__tech-title">Tech Stack:</h4>
-                    <div class="exp-card__tech-list">
-                        ${exper.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join("")}
-                    </div>
-                </div>
-            `;
-        }
+            <div class="exp-card__meta">
+                <i class="bi bi-calendar3" aria-hidden="true"></i>
+                <time class="exp-card__date">${escapeHtml(date)}</time>
+            </div>
 
-        experCard.append(header, meta, desc);
+            <p class="exp-card__desc">${escapeHtml(exper.description || "")}</p>
 
-        if (projectsHtml) {
-            const projectsContainer = document.createElement("div");
-            projectsContainer.innerHTML = projectsHtml;
-            experCard.appendChild(projectsContainer.firstElementChild);
-        }
+            ${projectsTemplate(exper.projects)}
+            ${techStackTemplate(exper.techStack)}
+        </article>
+    `;
+}
 
-        if (techStackHtml) {
-            const techContainer = document.createElement("div");
-            techContainer.innerHTML = techStackHtml;
-            experCard.appendChild(techContainer.firstElementChild);
-        }
+// Projects Section (rendered as inline chips to save vertical space)
+function projectsTemplate(projects) {
+    if (!projects || projects.length === 0) return "";
 
-        fragment.appendChild(experCard);
-    });
-    card.appendChild(fragment);
+    const chips = projects.map((project) => `<span class="exp-project-chip">${escapeHtml(project)}</span>`).join("");
+
+    return `
+        <div class="exp-card__projects">
+            <h4 class="exp-card__projects-title">Projects Worked On:</h4>
+            <div class="exp-card__projects-list">${chips}</div>
+        </div>
+    `;
+}
+
+// Tech Stack Section
+function techStackTemplate(techStack) {
+    if (!techStack || techStack.length === 0) return "";
+
+    const badges = techStack.map((tech) => `<span class="tech-badge">${escapeHtml(tech)}</span>`).join("");
+
+    return `
+        <div class="exp-card__tech-stack">
+            <h4 class="exp-card__tech-title">Tech Stack:</h4>
+            <div class="exp-card__tech-list">${badges}</div>
+        </div>
+    `;
 }
 /* ============================= End Get Experience Data From JSON File "data.json" ============================= */
